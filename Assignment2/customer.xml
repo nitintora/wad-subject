@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<customers>
+
+<customer>
+<Type>Seller</Type>
+<Email>nitintoora@gmail.com</Email>
+<Password>nitin</Password>
+</customer>
+
+<customer>
+<Type>Buyer</Type>
+<Email>check@check.com</Email>
+<Password>check123</Password>
+</customer>
+
+<customer>
+<Type>Seller</Type>
+<Email>nitintoora@gmail.com</Email>
+<Password>nitin</Password>
+</customer>
+
+</customers>

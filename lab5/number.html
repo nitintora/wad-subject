@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click me</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Javascript alerts" />
+    <script src="number.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function showAnotherMessage(){   
+        //document.getElementById("result").innerHTML = "Paragraph changed!";
+        var numberfield = document.getElementById("numberfield").value;
+        
+        var i;
+        var j = " ";
+        for (i = numberfield - 1; i >= 1; i--) {
+            if (numberfield   % i != 0 || i == 1) {
+               //document.writeln(i);
+               j+= " </br>"+i; 
+               
+            }
+        }
+       document.getElementById("result").innerHTML = j;
+
+    }
+    </script>
+    <h1>Input and Output using Javascript</h1>
+    <p>
+        <input type="text" id="numberfield" />
+        <button type="button" onClick="showAnotherMessage()">Click Me!</button>
+    </p>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<hotels>
+<hotel>
+<City>Paris</City>
+<Name>La Splendide</Name>
+<Type>Budget</Type>
+<Price>100</Price>
+</hotel>
+<hotel>
+<City>London</City>
+<Name>The Rilton</Name>
+<Type>Luxury</Type>
+<Price>300</Price>
+</hotel>
+<hotel>
+
+<City>London</City>
+<Name>The Rilton</Name>
+<Type>Luxury</Type>
+<Price>300</Price>
+</hotel>
+
+<hotel>
+<City>Paris</City>
+<Name>La splendite</Name>
+<Type>Budget</Type>
+<Price>100</Price>
+</hotel>
+
+<hotel>
+<City>Paris</City>
+<Name>La splend 2</Name>
+<Type>Budget</Type>
+<Price>90</Price>
+</hotel>
+
+<hotel>
+<City>Paris</City>
+<Name>La splend 2</Name>
+<Type>Budget</Type>
+<Price>120</Price>
+</hotel>
+
+<hotel>
+<City>Paris</City>
+<Name>La splend luxury</Name>
+<Type>Budget</Type>
+<Price>520</Price>
+</hotel>
+
+
+<hotel>
+<City>Paris</City>
+<Name>La splend luxury2</Name>
+<Type>Budget</Type>
+<Price>420</Price>
+</hotel>
+
+
+<hotel>
+<City>Paris</City>
+<Name>La splend luxury3</Name>
+<Type>Budget</Type>
+<Price>620</Price>
+</hotel>
+
+
+<hotel>
+<City>Paris</City>
+<Name>La splend luxury deluxe</Name>
+<Type>Luxury</Type>
+<Price>1620</Price>
+</hotel>
+
+<hotel>
+<City>Paris</City>
+<Name>La splend luxury3 deluxe</Name>
+<Type>Luxury</Type>
+<Price>2620</Price>
+</hotel>
+
+
+</hotels>
