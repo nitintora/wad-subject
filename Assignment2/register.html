@@ -1,0 +1,70 @@
+<!--  Author : Nitin Tora
+Student Number: 100649911
+Registers the new customer  -->
+<html lang="en">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="description" content="Web Application Development - Assignment 1">
+	<meta name="keywords" content="Html, php, Mysql">
+	<title>Cabs Online | Book the cab now</title>
+	</head>
+	
+	<h1> customer for Cabs Online</h1>
+	<p> Please fill the form to customer</p>
+	<fieldset>	
+		First Name*: <input type="text" id="fname" name="fname" required="required"/><br/>
+		Surname*: <input type="text" id="surname" name="surname" required="required"/> <br/>
+		Email*: <input type="text" id="emailreg" name="email" required="required" placeholder = "example@example.com"/> <br/>
+		<input type="submit" value="Login" name="submitted" onclick="getInfo()" /><br />
+		<span id="information"></span>
+	</fieldset>
+	</form>
+	
+	<p> Already a customer ? <a href="login.php"><b>Login here</b></a></b></a></p>
+</html>
+
+<script type="text/javascript">
+var xmlhttp = false;
+if (window.XMLHttpRequest)
+    xmlhttp = new XMLHttpRequest();
+else if (window.ActiveXObject)
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    
+function getInfo()
+{
+  alert("in getInfo");
+  var fname = document.getElementById('fname').value;
+  var surname = document.getElementById('surname').value;
+  var emailreg = document.getElementById('emailreg').value;
+  
+  if(emailreg == "" || surname =="" || fname == ""){
+      alert("First name, Surname and email");
+    }
+    else {
+      alert("in else"+emailreg+"---"+surname);
+      retrieveInfo();
+    }
+}
+
+function retrieveInfo(){
+  //var params = "&user=" +  + "&pass=" ;
+  xmlhttp.open("GET", "register.php?fname=" +document.getElementById('fname').value + "&surname=" +document.getElementById('surname').value + "&emailreg=" +document.getElementById('emailreg'), true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        alert("in getInfo - If"); 
+        var return_status = xmlhttp.responseText;
+        alert(return_status);
+        //var result = JSON.parse(return_status);
+        return_status = return_status.trim();
+        if (return_status != "emailexists") {
+           document.getElementById("information").innerHTML = "Email registered"; }
+        } else {
+          document.getElementById("information").innerHTML = "Email Already exists"; 
+        }
+      }
+      xmlhttp.send(); // Actually execute the request
+}
+</script>
+

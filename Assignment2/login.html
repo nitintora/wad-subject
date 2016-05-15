@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="description" content="Web Application Development - Assignment 1">
+	<meta name="keywords" content="Html, php, Mysql">
+	<title>Cabs Online | Book the cab now| Login</title>
+	</head>
+	<h1> Shop Online</h1>
+	<nav>
+    <a href="/html/">HTML</a> |
+    <a href="/css/">CSS</a> |
+    <a href="/js/">JavaScript</a> |
+    <a href="/jquery/">jQuery</a>
+    </nav>
+	
+	<p> Please fill the form to register</p>
+	Email: <input type="text" name="email" id="email" required = "required"/> <br />
+	Password: <input type="password" name="password" id="password" required="required"/> <br />
+	<!-- <input type="hidden" name="submitted" value="true" /> -->
+	<input type="submit" value="Login" name="submitted" onclick="getInfo()" /><br />
+	<span id="information"></span>
+	<p> <b>New Member? <a href =register.php>Register now</a></b></p>
+</html>
+
+<script type="text/javascript">
+var xmlhttp = false;
+if (window.XMLHttpRequest)
+    xmlhttp = new XMLHttpRequest();
+else if (window.ActiveXObject)
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    
+function getInfo()
+{
+  alert("in getInfo");
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+    if(email == "" || password ==""){
+      alert("Email and password cannot be empty")
+    }
+    else {
+      alert("in else"+email+"---"+password);
+      retrieveInfo();
+    }
+     
+}
+
+function retrieveInfo(){
+  //var params = "&user=" +  + "&pass=" ;
+  xmlhttp.open("GET", "login.php?email=" +document.getElementById('email').value + "&password=" + document.getElementById('password').value, true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        alert("in getInfo - If"); 
+        var return_status = xmlhttp.responseText;
+        alert(return_status);
+        //var result = JSON.parse(return_status);
+        return_status = return_status.trim();
+        if (return_status == "ok") {
+          window.location = "bidding.htm";
+        } else {
+          document.getElementById("information").innerHTML = "Wrong Credientials"; }
+        }
+      }
+      xmlhttp.send(); // Actually execute the request
+  }
+
+</script>
