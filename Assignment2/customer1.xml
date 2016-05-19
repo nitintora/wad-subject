@@ -71,4 +71,32 @@
     <id>57384083e922b</id>
     <Password>4627ffef4defd28bbe82acba7d43e111</Password>
   </customer>
+  <customer>
+    <Firstname>nit</Firstname>
+    <Surname>nit</Surname>
+    <Email>[object HTMLInputElement]</Email>
+    <id>573dbf72bf7be</id>
+    <Password>64e0a51a4fef3dd6110c51708926c909</Password>
+  </customer>
+  <customer>
+    <Firstname>nit</Firstname>
+    <Surname>nit</Surname>
+    <Email>[object HTMLInputElement]</Email>
+    <id>573dbfe6ca923</id>
+    <Password>3a3d7fd218fa2b45134bbde7d039341d</Password>
+  </customer>
+  <customer>
+    <Firstname>nitin</Firstname>
+    <Surname>nitin</Surname>
+    <Email>nitin@bob.com</Email>
+    <id>573dd16920ed8</id>
+    <Password>3ad33c368078f62a2af3a1aeb01066e5</Password>
+  </customer>
+  <customer>
+    <Firstname>nit</Firstname>
+    <Surname>nit</Surname>
+    <Email>nitintoora@nit.com</Email>
+    <id>573dd297bc44c</id>
+    <Password>434867d59e8ab33fb4b02b2cb4159f83</Password>
+  </customer>
 </customers>
