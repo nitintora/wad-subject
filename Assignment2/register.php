@@ -24,8 +24,6 @@ else
 }
 //customer element
 $customer = $dom->getElementsByTagName("customer"); 
-	
-
 
 foreach($customer as $node) 
 {
