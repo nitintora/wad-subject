@@ -6,8 +6,8 @@ date_default_timezone_set('Australia/Melbourne');
 $xml = new DOMDocument('1.0');
 $xml->preserveWhiteSpace = false;
 $xml->formatOutput = true;
-$xml->load('listing.xml');
-$xmlFile = "listing.xml";
+$xml->load('auction.xml');
+$xmlFile = "auction.xml";
 $dom = DOMDocument::load($xmlFile);
 
 //declate get variables
@@ -82,6 +82,6 @@ $itemxml->appendChild($expiryDateNode);
       ." on ".$presentDate->format('Y-m-d');
 
 //echo "<xmp>" .$xml->saveXML(). "</xmp>";
-$xml->save("listing.xml");
+$xml->save("auction.xml");
 
 ?>

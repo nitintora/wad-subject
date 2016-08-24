@@ -4,8 +4,8 @@ session_start();
 $xml = new DOMDocument('1.0');
 $xml->preserveWhiteSpace = false;
 $xml->formatOutput = true;
-$xml->load('customer1.xml');
-$xmlFile = "customer1.xml";
+$xml->load('customer.xml');
+$xmlFile = "customer.xml";
  //$dt = simplexml_load_file($xmlFile);
 $dom = DOMDocument::load($xmlFile);
 $emailreg = $_GET['emailreg'];
@@ -75,6 +75,6 @@ mail($recipient, $subject, $message, $header, "-r 100649911@student.swin.edu.au"
 }
 
 //echo "<xmp>" .$xml->saveXML(). "</xmp>";
-$xml->save("customer1.xml");
+$xml->save("customer.xml");
 
 ?>

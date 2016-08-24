@@ -3,7 +3,7 @@
 //login
 error_log("====inside login.php=====");
 session_start();
-$xmlFile = "customer1.xml";
+$xmlFile = "customer.xml";
  //$dt = simplexml_load_file($xmlFile);
 $dom = DOMDocument::load($xmlFile);
 $customer = $dom->getElementsByTagName("customer"); 

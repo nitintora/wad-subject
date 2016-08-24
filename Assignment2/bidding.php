@@ -1,5 +1,5 @@
 <?php
-$url = "listing.xml";
+$url = "auction.xml";
 $xml = simplexml_load_file($url);
 
 // loop begins
@@ -8,7 +8,6 @@ foreach($xml->Item as $item)
 // begin new paragraph
 echo "<fieldset>";
 echo "<p>";
-echo "<strong>Id:</strong> ".$item->Id."<br/>";
 // show author
 echo "<strong>Category:</strong> ".$item->Category."<br/>";
 // show publisher
@@ -25,7 +24,8 @@ $interval = date_diff($date1, $date2);
 echo $interval->d." Days, ".$interval->h." Hours " .$interval->i. " minutes " .$interval->s.  " seconds remaining"; 
 
 // shows the total amount of days (not divided into years, months and days like above)
-echo "<br /><input type='submit' value='Buy it now' name='submitted' onclick='getInfo()' />";
+echo "<br /><input type='submit' value='Buy it now' name='submitted' onclick='buyItNow()' />";
+echo "<input type='submit' value='Place Bid' name='submitted' onclick='placeBid()' />";
 echo "</p>";
 echo "</fieldset>";
 // end paragraph
